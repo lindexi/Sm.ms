@@ -1,34 +1,4 @@
-# win10 uwp 图床
-
-
-## smms图床
-
-### Nuget 安装
-
-搜索imageShack，打开`Imageshack.lindexi`
-
-### 使用
-
-```
-            //传入文件
-            smms.Model.Imageshack imageshack = new Imageshack()
-            {
-                File=File,
-            };
-            //上传完成事件，其中str为sm.ms返回，一般为json
-            //Reminder是例子，可以根据具体修改，注意要同步CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync
-            imageshack.OnUploadedEventHandler += (sender, str) => Reminder = str.Replace("\\/","/");
-            //上传
-            imageshack.UpLoad();
-```
-
-## 七牛图床
-
-qiniu图床上从官方的qiniu sdk 修改的。
-
-功能：上传图片、获取外链
-
-实际功能可以上传文件。
+# 七牛图床
 
 ### Nuget安装
 
@@ -36,9 +6,7 @@ qiniu图床上从官方的qiniu sdk 修改的。
 
 搜索`imageShack`，第一个`lindexi.uwp.ImageShack.Thirdqiniucs`
 
-### 使用
-
-图床在https://github.com/lindexi/UWP/tree/master/uwp/src/Imageshack/cloundes
+安装完成，如要使用需写必要参数。
 
 先写配置，配置是需要AK和SK，空间名，域名。
 
@@ -94,5 +62,10 @@ AK和SK可以在个人面板密钥获得
 
 ```
 
+## 感谢(按开发者名称排序)
 
+ - [Gemini2015](https://github.com/Gemini2015/QiniuSDK) 
+ 
+ - [JuniperPhoton](https://github.com/JuniperPhoton/QiniuUWP)
 
+ - [qiniu](https://github.com/qiniu/csharp-sdk)
