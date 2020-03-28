@@ -10,4 +10,11 @@
         <Reference Include="System.Net.Http"></Reference>
         <Reference Include="System.Web"></Reference>
     </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="dotnetCampus.SourceYard" Version="0.1.19026-alpha">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
+    </ItemGroup>
 </Project>
