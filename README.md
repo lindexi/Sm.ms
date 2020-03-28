@@ -15,6 +15,8 @@ dotnet add package smms
 Create a Smms object and set the api token
 
 ```csharp
+using Sm.ms
+
             var smms = new Smms("xxx");
 ```
 
