@@ -1,5 +1,9 @@
 # Sm.ms
 
+| Build | NuGet |
+|--|--|
+|![](https://github.com/lindexi/Sm.ms/workflows/.NET%20Core/badge.svg)|[![](https://img.shields.io/nuget/v/smms)](https://www.nuget.org/packages/smms)|
+
 ## Getting Started
 
 NuGet install:
