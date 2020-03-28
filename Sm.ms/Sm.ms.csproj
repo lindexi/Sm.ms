@@ -1,9 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <OutputType>Exe</OutputType>
+        <OutputType>Library</OutputType>
         <TargetFrameworks>net45;netstandard2.0;netcoreapp3.1</TargetFrameworks>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <ApplicationIcon />
+        <StartupObject />
+        <PackageId>smms</PackageId>
     </PropertyGroup>
 
     <ItemGroup Condition="$(TargetFramework)=='net45'">
