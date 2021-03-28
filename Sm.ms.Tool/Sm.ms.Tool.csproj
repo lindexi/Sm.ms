@@ -5,10 +5,15 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <PackAsTool>true</PackAsTool>
     <ToolCommandName>UploadSmms</ToolCommandName>
+    <Nullable>enable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Sm.ms\Sm.ms.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="dotnetCampus.CommandLine" Version="3.3.0" />
   </ItemGroup>
 
 </Project>
