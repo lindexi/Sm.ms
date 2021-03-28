@@ -17,7 +17,12 @@ namespace Sm.ms
         public async Task<string> UploadImage(Stream image, string fileName)
         {
             using var httpClient = new HttpClient();
-            httpClient.DefaultRequestHeaders.Add("Authorization", ApiToken);
+
+            if (!string.IsNullOrEmpty(ApiToken))
+            {
+                httpClient.DefaultRequestHeaders.Add("Authorization", ApiToken);
+            }
+
             httpClient.DefaultRequestHeaders.UserAgent.Clear();
             httpClient.DefaultRequestHeaders.UserAgent.ParseAdd("Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:86.0) Gecko/20100101 Firefox/86.0");
 
@@ -29,7 +34,7 @@ namespace Sm.ms
 
             var httpResponseMessage = await httpClient.PostAsync(url, multipartFormDataContent).ConfigureAwait(false);
             return await httpResponseMessage.Content.ReadAsStringAsync().ConfigureAwait(false);
-        }
+        } 
 
         public async Task<SmmsResponseBase<UploadImageResponse>> UploadImageAsync(Stream image, string fileName)
         {
